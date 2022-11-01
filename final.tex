@@ -1,0 +1,251 @@
+\documentclass[aspectratio=169, dvipdfmx, 11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{sidebartab}
+\setbeamertemplate{navigation symbols}{}
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+}
+\usepackage{amsmath, amssymb}
+\usepackage{url}
+\usepackage{ulem}
+\usepackage{geometry}
+\usepackage{eclclass}
+\usepackage{fancybox}
+\usepackage{bm}
+\usepackage{array}
+\setbeamercolor{button}{bg=white,fg=cyan}
+\setbeamertemplate{footline}[frame number]
+\geometry{
+    left=7.5mm,
+    right=7.5mm,
+}
+
+\title[Final Paper Plan]{Final Paper plan in Nov, 2022}
+\author{Ichiro Kozakai}
+\date{\today}
+
+\begin{document}
+\begin{frame}[noframenumbering, plain]
+    \titlepage
+\end{frame}
+
+\begin{frame}[noframenumbering, plain]
+    \tableofcontents
+\end{frame}
+
+
+\section{Study Question \& Motivation}
+\begin{frame}
+    \begin{description}
+        \setlength{\itemsep}{0.3in}
+        \item[My Study Question]\mbox{}\\
+        \begin{itemize}
+            \setlength{\itemsep}{0.1in}
+            \setlength{\itemindent}{-15mm}
+            \item[$\blacktriangleright$] Can labor and non-labor capital co-exist in economic activity?
+            \item[$\blacktriangleright$] What M\&A brings to firms' and industries' production?
+        \end{itemize}
+        \item[Study Background] \mbox{}\\
+            \begin{itemize}
+                \setlength{\itemsep}{0.1in}
+                \setlength{\itemindent}{-15mm}
+                \item[$\blacktriangleright$] aaa
+            \end{itemize}
+    \end{description}
+\end{frame}
+
+\section[Production Function]{Estimation of Production Function with Variable Parameters}
+\subsection{Select the Function}
+\begin{frame}
+    In this phase, I choose a type of production function, considering the function characteristics and the relation to the next section and beyond.
+    \begin{itemize}
+        \setlength{\itemsep}{7mm}
+        \item CES : $\bm{Y}=\bm{F}\cdot\left[\sum\limits_{i}^n {a_i}{{\bm{X_{i}}}^{r}}\right]^{\frac{1}{r}}$
+              \begin{itemize}
+                  \setlength{\itemsep}{.1in}
+                  \item[$\bigcirc$] {\color{blue} Easy to determine the substitute/complementary relation among various factors and appropriate production function}
+                  \item[$\bigtriangleup$] {\color{red} Difficult to use for time-series changes because the elasticity of substitution between factors is assumed to be constant}
+              \end{itemize}
+        \item Cob-Douglas : $\bm{Y}=\gamma\prod\limits_{i}^{n} \bm{X_{i}}^{\alpha_{i}}$
+              \begin{itemize}
+                  \setlength{\itemsep}{.1in}
+                  \item[$\bigcirc$] {\color{blue} Tractable}
+                  \item[$\bigtriangleup$] {\color{red} Difficult to use for time-series changes because the elasticity of substitution between elements is strongly assumed to always be 1}
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \setlength{\itemsep}{3mm}
+        \item Trans-Log : $\ln{\bm{Y}}={\alpha_{0}}+\sum\limits_{i}^{n} \alpha_{i}(\ln{\bm{X_{i}}})+{\frac{1}{2}}\sum\limits_{i}^{n}\sum\limits_{j}^{n} {\beta_{ij}}(\ln{\bm{X_{i}}})(\ln{\bm{X_{j}}})$
+              \begin{itemize}
+                  \setlength{\itemsep}{.1in}
+                  \item[$\bigcirc$] {\color{blue} Suitable for measuring time-series changes because it makes no a priori assumptions about the elasticity of substitution of elements}
+                  \item[$\bigtriangleup$] {\color{red} Awkward}
+              \end{itemize}
+        \item Linear : $\bm{Y}=\sum\limits_{i}^{n} {\alpha_{i}}{\bm{X_{i}}}$
+              \vspace{-4mm}
+        \item Leontief : $\bm{Y}=min\{{\frac{\bm{X_{1}}}{\alpha_{1}}}, \cdots, {\frac{\bm{X_{n}}}{\alpha_{n}}}\}$
+              \begin{itemize}
+                  \setlength{\itemsep}{.1in}
+                  \vspace{2mm}
+                  \item[$\bigcirc$] {\color{blue} Tractable}
+                  \item[$\bigtriangleup$] {\color{red} Very restrictive and limited number of cases}
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \vspace{4mm}
+    \textbf{\Large{Reference}}\\
+    \vspace{8mm}
+    \hyperlink{file:///C:/Users/ichir/Downloads/keizai281-14.pdf}{\beamergotobutton{\dotuline{生産関数推定について：手法に関する考察と規制緩和への示唆（中村豪）}}}\\
+    \vspace{3mm}
+    \hyperlink{https://www.maff.go.jp/primaff/kanko/nosoken/attach/pdf/198601_nsk40_1_01.pdf}{\beamergotobutton{\dotuline{2段階CES型生産関数の計測と誘発的技術変化仮説の検証（川越俊彦）}}}\\
+    \vspace{3mm}
+    \hyperlink{https://core.ac.uk/download/pdf/286932843.pdf}{\beamergotobutton{\dotuline{フレキシブル関数の理論（浜口登）}}}\\
+    \vspace{3mm}
+    \hyperlink{https://www1.doshisha.ac.jp/~kmiyazaw/undergraduate/Elasticity_of_substitution.pdf}{\beamergotobutton{\dotuline{要素代替の弾力性（宮澤和俊）}}}\\
+    \vspace{3mm}
+    \hyperlink{https://www.jstage.jst.go.jp/article/srs1970/25/1/25_1_147/_pdf/-char/ja}{\beamergotobutton{\dotuline{トランス・ログ型関数による航空輸送産業の費用構造の分析（衣笠達夫）}}}\\
+    \vspace{3mm}
+    \hyperlink{https://www.rieti.go.jp/jp/publications/dp/17e083.pdf}{\beamergotobutton{\dotuline{Decomposition of Aggregate Productivity Growth with Unobserved Heterogeneity（笠原博幸、西田充邦、鈴木通雄）}}}
+\end{frame}
+
+\subsection{Decomposition of Aggregate Factor}
+\begin{frame}
+    \begin{columns}
+        \begin{column}{0.54\textwidth}
+            \begin{center}
+                \begin{classify}{\textbf{\Large \color{blue}{Labor Capital}}}
+                    \class{
+                        \begin{classify}{Education}
+                            \class{{\color{red}High-Educated/Skilled}}
+                            \class{{\color{red}Low-Educated/Unskilled}}
+                        \end{classify}
+                    }
+                    \class{
+                        \begin{classify}{Employment}
+                            \class{
+                                \begin{classify}{Contract Type}
+                                    \class{{\color{red}Permanent}}
+                                    \class{{\color{red}Contract}}
+                                    \class{{\color{red}Part-Time}}
+                                \end{classify}
+                            }
+                            \class{
+                                \begin{classify}{Career}
+                                    \class{{\color{red}Proper}}
+                                    \class{{\color{red}Job-Changer}}
+                                    \class{{\color{red}Loaned Staff}}
+                                \end{classify}
+                            }
+                        \end{classify}
+                    }
+                \end{classify}
+            \end{center}
+        \end{column}
+        \begin{column}{0.02\textwidth}
+            \rule{.1mm}{.9\textheight}
+        \end{column}
+        \begin{column}{0.44\textwidth}
+            \begin{center}
+                \begin{classify}{\textbf{\Large \color{blue}Non-Labor Capital}}
+                    \class{
+                        \begin{classify}{Liquidity}
+                            \class{{\color{red}Fixed Assets}}
+                            \class{{\color{red}Current Assets}}
+                            \class{{\color{red}Deferred Assets}}
+                        \end{classify}
+                    }
+                    \class{
+                        \begin{classify}{Tangibility}
+                            \class{{\color{red}Tangible Assets}}
+                            \class{{\color{red}Intangible Assets}}
+                        \end{classify}
+                    }
+                \end{classify}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{Industry/Sector Classification}
+\begin{frame}
+    I wanna classify firms/Corporation into some Industry or Sector with easy and versatile ways. Some classification-criteria candidates are as following;\\
+    \vspace{8mm}
+    \hyperlink{https://www.spglobal.com/spdji/jp/landing/topic/gics/}{\beamergotobutton{\dotuline{\Large{S\&P Dow Jones Indexes(GICS)}}}}\\
+    \begin{itemize}
+        \item[$\bullet$] \hyperlink{https://www.jpx.co.jp/markets/indices/carbon-efficient/nlsgeu000003b0r8-att/sp-jpx-carbon-efficient-index-constituent-report.pdf}{\beamerbutton{GICS for Japan Market ver. 2022}}
+    \end{itemize}
+    \vspace{6mm}
+    \hyperlink{https://www.nikkei.com/telecom/industry_l}{\beamergotobutton{\dotuline{\Large{日経業種分類}}}}\\
+    \vspace{6mm}
+    \hyperlink{https://www.soumu.go.jp/toukei_toukatsu/index/seido/sangyo/02toukatsu01_03000044.html}{\beamergotobutton{\dotuline{\Large{日本標準産業分類}}}}\\
+    \vspace{6mm}
+    \hyperlink{https://management-accounting.biz/industry-type-2/}{\beamergotobutton{\dotuline{\large{Other ways \& reference}}}}
+\end{frame}
+
+\subsection{Time-Series Change and Factor Scale}
+\begin{frame}
+    In this phase, I organize the time-series changes of parameters of production function and the time-series trends of abstract/relevant amounts for each production factors.
+\end{frame}
+
+\subsection{Estimates of markup rate}
+\begin{frame}
+    Referring to \hyperlink{https://repository.tku.ac.jp/dspace/bitstream/11150/11249/1/keizai299-11.pdf}{\beamerbutton{\dotuline{生産関数を用いたマークアップ率の計測に関する検証（中村豪）}}}, I measures the markup rate and its relation with production parameters for each industries/sectors.
+\end{frame}
+
+\section[Cost Function]{Estimation of Cost Function Independently}
+\subsection{Select the Function}
+\begin{frame}
+    In this section, I estimate the Cost Function independently of production function with same factors.\\
+    The reference is as following;\\
+    \vspace{10mm}
+    \hyperlink{https://doshisha.repo.nii.ac.jp/?action=repository_action_common_download&item_id=22965&item_no=1&attribute_id=28&file_no=1}{\beamergotobutton{国立大学の費用関数:トランスログ・コストシェアモデルによる同時推定（北坂真一）}}\\
+    \vspace{6mm}
+    \hyperlink{https://core.ac.uk/download/pdf/71796667.pdf}{\beamergotobutton{実証分析における生産，費用関数（中西泰夫）}}
+\end{frame}
+
+\subsection{Estimation the factors price}
+\begin{frame}
+    In this phase, I will estimate the factor price with cost function estimate above or IO-table if possible.
+\end{frame}
+
+\section[Easy Causal Inference]{Causal Inference between M\&A and Factor Productivity}
+\begin{frame}
+    \begin{itemize}
+        \setlength{\itemsep}{8mm}
+        \item In the former paper written with seminar members, we investigated why M\&A.
+        \item In this paper, I study what M\&A brought to firms' production/productivity with statistic causal inference.
+        \item At last, I will study the connection between M\&A and firms'/Sector or industry's markup.
+    \end{itemize}
+\end{frame}
+
+\section[Capital or/and Labor]{Consideration of Time-Series Relationship between Capital and Labor}
+\begin{frame}Based on the aforementioned study, I put my own answers to my study questions.
+    \vspace{12mm}
+    \begin{itemize}
+        \setlength{\itemsep}{8mm}
+        \item Human labor and non-labor capital are substitute? or complementary?
+        \item How No. of entries and exit of companies and decrease No. of companies in a market affects their productivity or labor-capital relation?
+    \end{itemize}
+
+\end{frame}
+\section{Data}
+\begin{frame}
+    \begin{itemize}
+        \setlength{\itemsep}{5mm}
+        \item Bloomberg
+        \item DBJ
+        \item Nikkei needs
+        \item IO table
+    \end{itemize}
+\end{frame}
+\end{document}

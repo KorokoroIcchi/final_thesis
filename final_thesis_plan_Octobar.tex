@@ -1,0 +1,77 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{url}
+\usepackage{ecltree}
+\usepackage{fancybox}
+\usepackage{qtree}
+\usepackage{enumitem}
+\usepackage{ulem}
+\usepackage[colorlinks=true, bookmarks=true,
+bookmarksnumbered=true, bookmarkstype=toc, linkcolor=blue,
+urlcolor=black, citecolor=blue]{hyperref}
+
+\title{Final Paper plan in October}
+\author{Ichiro Kozakai}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Estimation of Production Function}
+In this phase, I estimate the production function sector by sector.
+\begin{itemize}
+    \setlength{\itemsep}{7.5mm}
+    \item function list
+          \begin{itemize}
+              \item CES: \hspace{5mm} $Y=[{\alpha{K^{\sigma}}}+{\beta{L^{\sigma}}}]^{\frac{1}{\sigma}}$
+              \item Cob-Douglas: \hspace{5mm} $Y=AK^{\alpha}L^{\beta}$
+              \item Linear: \hspace{5mm} $Y={\alpha}K+{\beta}L$
+              \item Leontief: \hspace{5mm} $Y=min\{{\alpha}K, {\beta}L\}$
+              \item Translog:
+                    {\hspace{5mm} {\small $\ln{Y}=\alpha_{0}+{\alpha_{1}{(\ln{K})}}+{\alpha_{2}{(\ln{L})}}+{\frac{1}{2}}{\alpha_{11}(\ln{K})^{2}}+{\frac{1}{2}}{\alpha_{22}(\ln{L})^{2}}+{\alpha_{12}{(\ln{K})}{(\ln{L})}}$}} \\
+                    $\blacktriangleright$\href{https://www.rieti.go.jp/jp/publications/summary/17050024.html}{\dotuline{Decomposition of Aggregate Productivity Growth with Unobserved Heterogeneity}}
+          \end{itemize}
+    \item Decomposition of Aggregate Factor
+    \item \href{https://management-accounting.biz/industry-type-2/}{\dotuline{SIC classification}}
+          \begin{itemize}
+              \item \href{https://www.jpx.co.jp/markets/indices/carbon-efficient/nlsgeu000003b0r8-att/sp-jpx-carbon-efficient-index-constituent-report.pdf}{\dotuline{S\&P Dow Jones Indexes(GICS)}}
+              \item \href{https://www.nikkei.com/telecom/industry_l}{\dotuline{日経業種分類}}
+              \item \href{https://www.soumu.go.jp/toukei_toukatsu/index/seido/sangyo/02toukatsu01_03000044.html}{\dotuline{日本標準産業分類}}
+          \end{itemize}
+    \item consideration of time series change and factor scale
+    \item Estimation of markup rate according to production function
+          \begin{itemize}[label=$\blacktriangleright$]
+              \item \href{https://repository.tku.ac.jp/dspace/bitstream/11150/11249/1/keizai299-11.pdf}{\dotuline{生産関数を用いたマークアップ率の計測に関する検証（中村 豪）}}
+          \end{itemize}
+\end{itemize}
+
+
+
+
+\section{Estimation of Cost Function}
+In this section, I estimate the cost function in a way independent of production function with same factors and period.\\
+\begin{itemize}[label=$\blacktriangleright$]
+    \item \href{https://doshisha.repo.nii.ac.jp/?action=repository_action_common_download&item_id=22965&item_no=1&attribute_id=28&file_no=1}{\dotuline{トランスログ・コストシェアモデルによる同時推定}}
+    \item \href{https://core.ac.uk/download/pdf/71796667.pdf}{\dotuline{実証分析における生産，費用関数}}
+\end{itemize}
+
+
+
+
+
+
+\section{Consideration of correlation between factor price and factor productivity}
+
+
+
+
+
+\section{Easy Causal inference between M\&A and factor productivity}
+
+
+
+
+
+
+\section{Reference data}
+\end{document}
