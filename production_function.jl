@@ -1,3 +1,9 @@
-using GLM
-using DataFrames
-using CSV
+using GLM;
+using DataFrames;
+using CSV;
+using RDatasets;
+using MLJLinearModels;
+using PyPlot;
+using MultivariateStats;
+using PlotlyJS;
+using Plots;
